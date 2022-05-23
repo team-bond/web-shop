@@ -24,12 +24,12 @@ $("button").click(function () {
     );
 
     let source = $(this).val();
-    let name =  $('#userName').val()
+    let name = $('#userName').val()
     let modalSource = 'API';
     $("#ftpImages").hide();
     $("#apiImages").show();
 
-    if (source == "ftp"){
+    if (source == "ftp") {
         modalSource = 'FTP Server'
         $("#ftpImages").show();
         $("#apiImages").hide();
@@ -41,7 +41,7 @@ $("button").click(function () {
     $.ajax({
         type: "POST",
         url: "https://fair-bond.herokuapp.com/api/flow/session",
-        data: JSON.stringify({name:name, source: source.toUpperCase()}),
+        data: JSON.stringify({name: name, source: source.toUpperCase()}),
         contentType: "application/json",
         encode: true,
     }).done(function (data) {
@@ -57,5 +57,27 @@ $("button").click(function () {
 
 
 $(document).ready(function () {
+    $.ajax({
+        type: "GET",
+        url: "https://fair-bond.herokuapp.com/api/market/random/text",
+        contentType: "application/json",
+    }).done(function (data) {
+        $("#user-paragraph").html(data.content);
+    }).fail(function (jqXHR, textStatus, errorThrown) {
+        console.log(jqXHR.responseJSON.errorCode)
+        alert(jqXHR.responseJSON.errorText, 'danger')
+    })
+
+    $.ajax({
+        type: "GET",
+        url: "https://fair-bond.herokuapp.com/api/market/random/asset",
+        contentType: "application/json",
+    }).done(function (data) {
+        var image = 'data:image/png;base64,' + data.content;
+        $("#uploadedImage").attr("src", image);
+    }).fail(function (jqXHR, textStatus, errorThrown) {
+        console.log(jqXHR.responseJSON.errorCode)
+        alert(jqXHR.responseJSON.errorText, 'danger')
+    })
 
 });
