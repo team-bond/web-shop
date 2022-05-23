@@ -14,30 +14,71 @@
 <body>
 <!-- Responsive navbar-->
 <nav class="navbar navbar-expand-lg  bg-dark">
-    <div class="container text-center">
-        <a class="navbar-brand text-center" href="/">
-            <img src='assets/bol-logo.png' alt="bol.com" width="140" height="43">
-        </a>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <a class="navbar-brand" href="/">
+                    <img src='assets/bol-logo.png' alt="bol.com" width="140" height="43">
+                </a>
+            </div>
+            <div class="col-9">
+                <div class="row height d-flex justify-content-center align-items-center">
+                    <div class="col-md-6">
+                        <div class="form">
+                            <i class="fa fa-search"></i>
+                            <input type="text" class="form-control form-input" placeholder="Search anything...">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                </div>
+            </div>
+        </div>
     </div>
 </nav>
 <!-- Page content-->
 <div class="container">
     <div class="text-center mt-5">
         <span id="alertPlaceholder"></span>
-        <form action="/" id="signUpForm">
-            <h1 class="h3 mb-3 fw-normal">Hello <span className="wave">👋🏻</span> Who are you?</h1>
-            <div class="form-floating">
-                <input type="text" class="form-control" id="userName" name="userName" placeholder="Timmy" required>
-                <label for="userName">Enter your name here!</label>
-            </div>
 
-            <h2 class="h3 mb-3 fw-normal">Where are you from?</h2>
-
-            <div class="d-grid gap-2 d-md-block">
-                <button class="btn btn-lg btn-primary" value="ftp" id="ftpButton" type="submit">FTP</button>
-                <button class="btn btn-lg btn-primary" value="api" id="apiButton" type="submit">API</button>
+        <div class="row">
+            <h2 class="text-start" style="margin-bottom: 30px">Sample product</h2>
+            <div class="col-9">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/chappie.png" class="d-block w-50" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/ditto.png" class="d-block w-50" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/kirby.png" class="d-block w-50" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
-        </form>
+            <div class="col">
+                column
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h3>Product Description</h3>
+                Sample text paragraph
+            </div>
+        </div>
 
         <!-- Footer-->
         <div id="footer"/>
