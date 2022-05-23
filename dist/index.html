@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>Tech Fair 2022 - Team BOND</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Responsive navbar-->
+<nav class="navbar navbar-expand-lg  bg-dark">
+    <div class="container text-center">
+        <a class="navbar-brand text-center" href="/">
+            <img src='assets/bol-logo.png' alt="bol.com" width="140" height="43">
+        </a>
+    </div>
+</nav>
+<!-- Page content-->
+<div class="container">
+    <div class="text-center mt-5">
+        <span id="alertPlaceholder"></span>
+        <form action="/" id="signUpForm">
+            <h1 class="h3 mb-3 fw-normal">Hello <span className="wave">👋🏻</span> Who are you?</h1>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="userName" name="userName" placeholder="Timmy" required>
+                <label for="userName">Enter your name here!</label>
+            </div>
+
+            <h2 class="h3 mb-3 fw-normal">Where are you from?</h2>
+
+            <div class="d-grid gap-2 d-md-block">
+                <button class="btn btn-lg btn-primary" value="ftp" id="ftpButton" type="submit">FTP</button>
+                <button class="btn btn-lg btn-primary" value="api" id="apiButton" type="submit">API</button>
+            </div>
+        </form>
+
+        <!-- Footer-->
+        <div id="footer"/>
+    </div>
+</div>
+
+<div id="login-ftp-modal"/>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!--Jquery-->
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<!-- Core theme JS-->
+<script src="js/index.js"></script>
+</body>
+</html>
