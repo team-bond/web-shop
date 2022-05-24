@@ -55,6 +55,9 @@ $("button").click(function () {
     })
 });
 
+function AutoRefresh( t ) {
+    setTimeout("location.reload(true);", t);
+}
 
 $(document).ready(function () {
     $.ajax({
@@ -81,5 +84,4 @@ $(document).ready(function () {
         console.log(jqXHR.responseJSON.errorCode)
         alert(jqXHR.responseJSON.errorText, 'danger')
     })
-
 });
