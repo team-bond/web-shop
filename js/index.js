@@ -63,6 +63,7 @@ $(document).ready(function () {
         contentType: "application/json",
     }).done(function (data) {
         $("#user-paragraph").html(data.content);
+        $("#textUploadedBy").html(data.uploadedBy);
     }).fail(function (jqXHR, textStatus, errorThrown) {
         console.log(jqXHR.responseJSON.errorCode)
         alert(jqXHR.responseJSON.errorText, 'danger')
@@ -75,6 +76,7 @@ $(document).ready(function () {
     }).done(function (data) {
         var image = 'data:image/png;base64,' + data.content;
         $("#uploadedImage").attr("src", image);
+        $("#imageUploadedBy").html(data.uploadedBy);
     }).fail(function (jqXHR, textStatus, errorThrown) {
         console.log(jqXHR.responseJSON.errorCode)
         alert(jqXHR.responseJSON.errorText, 'danger')
