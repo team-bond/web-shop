@@ -26,7 +26,7 @@
                     <div class="col-md-6">
                         <div class="form">
                             <i class="fa fa-search"></i>
-                            <input type="text" class="form-control form-input" placeholder="Search anything...">
+                            <input type="text" class="form-control form-input" placeholder="What are you looking for?">
                         </div>
                     </div>
                 </div>
@@ -40,22 +40,56 @@
         <span id="alertPlaceholder"></span>
 
         <div class="row">
-            <h2 class="text-start" style="margin-bottom: 30px">Sample product</h2>
+            <h2 class="text-start" style="margin-bottom: 30px">Team BOND</h2>
             <div class="col-9">
                 <img id="uploadedImage" class="img-fluid" alt="user uploaded image">
             </div>
             <div class="col">
-                column
+                <div class="row">
+                    <div>Choose your carrier</div>
+                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                        <label class="btn btn-outline-primary" for="btnradio1">4K</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio2">Blue - ray</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio3">DVD</label>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top: 25px;">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Product Description</h4>
+                            <p class="card-text" id="user-paragraph">
+                                The Vans All-Weather MTE Collection features footwear and apparel designed to withstand
+                                the elements whilst still looking cool. </p>
+                            <div class="options d-flex flex-fill">
+                                <select class="custom-select mr-1">
+                                    <option selected>Color</option>
+                                    <option value="1">Green</option>
+                                    <option value="2">Blue</option>
+                                    <option value="3">Red</option>
+                                </select>
+                                <select class="custom-select ml-1">
+                                    <option selected>Size</option>
+                                    <option value="1">41</option>
+                                    <option value="2">42</option>
+                                    <option value="3">43</option>
+                                </select>
+                            </div>
+                            <div class="buy d-flex justify-content-between align-items-center">
+                                <div class="price text-danger"><h3 class="mt-4">$125</h3></div>
+                                <a href="#" class="btn btn-warning mt-3"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-
-        <div class="row">
-            <div class="col">
-                <h3>Product Description</h3>
-                <span id="user-paragraph"></span>
-            </div>
-        </div>
-
         <!-- Footer-->
         <div id="footer"/>
     </div>
